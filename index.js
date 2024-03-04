@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import Kontak from './pages/Kontak';
+import App from './app';
+import Kontak from './pages/kontak';
+import Nav from './pages/nav';
+import Sejarah from './pages/sejarah';
 import reportWebVitals from 'reportWebVitals';
 
 ReactDOM.render(
@@ -13,4 +15,7 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
+
+
 reportWebVitals();
+

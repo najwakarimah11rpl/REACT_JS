@@ -13,5 +13,6 @@ function Tentang(){
         <button type="button" onClick={tambah} className="btn-succes">anu apalah</button>
         <button type="button" onClick={kurang} className="btn-succes-">kurang</button>
 
-    </div>
-)
+    </div>)
+export default Tentang;
+

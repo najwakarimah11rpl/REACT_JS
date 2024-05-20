@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>axios</title>
+    <script src="http"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="container">
+    <div class="row nt-4">
+        <div>
+            <h1 class="display-4">Axios ni bos</h1>
+        </div> <div>
+            <button type="button" class="btn btn-primary" id="get">Get</button>
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-link">Link</button> <br>
+    </div> 
+        <hr class="nt-4">
+    </div>
+</div>
+
+ <script>
+     const url="hrrp";
+    const token="e";
+    //     axios({
+    //         method:'get',
+    //         url:url,
+    //         headers:{'api_token':token}
+    //     }) .then(res=>console.log(res));
+
+const link=axios.create({
+    baseURL:url,
+    headers:{'api_token':token}
+});
+
+function get(){
+    link.get('/pelanggan').then(res=>{
+    console.log(res);
+        let tampil= <table class="table">
+            <tr> <th>Id</th>
+                <th>Pelanggan</th>
+                <th>Alamat</th>
+                <th>Telp</th>  </tr>});
+
+    res.data.forFach(el=>{
+        tampil*=<tr>
+            <td>$(el.idpelanggan)</td>
+            <td>$(el.pelanggan)</td>
+            <td>$(el.alamat)</td>
+            <td>$(el.telp)</td> </tr>;})}
+tampil= </table>;
+document.querySelector('#out').innerHTML=tampil;
+
+document.querySelector('#get').addEventListener('click',get);
+
+            
+</script>
+
+</body>
+</html>
